@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective Date: March 12, 2026**
+**Effective Date: March 01, 2026**
 
 ## Introduction
 This Privacy Policy for BoringMeeting describes how we handle user information. We **do not collect**, **store**, or **share** any personal data.
