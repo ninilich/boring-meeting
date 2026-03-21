@@ -9,9 +9,12 @@ This Privacy Policy for BoringMeeting describes how we handle user information. 
 The app operates primarily locally on the user's device.
 - No personal data (such as name, email, contacts, photos, location, or device identifiers) is collected or transmitted.
 - We do not create user accounts, use in-app tracking, analytics services, or advertising.
-- Screen Recording and System Audio Capture: To enable recording of online meetings (e.g., from Microsoft Teams, Zoom, and similar platforms) for subsequent transcription, the app requests user permission for screen recording and system audio capture via iOS privacy prompts. This captures:
-  - Visual content displayed on the screen from other applications during recording.
-  - System-wide audio output (meeting audio from any app).
+- Screen Recording and System Audio Capture: To enable recording of online meetings (e.g., Microsoft Teams, Zoom, and similar platforms)
+  for subsequent transcription, the app requests permission for screen recording and microphone access via macOS privacy prompts.
+  ScreenCaptureKit is used exclusively to capture system audio output — no video, screenshots, or visual content are ever captured or
+  stored. Captured audio includes: System-wide audio output (meeting audio from any app). These recordings are stored exclusively locally
+  on your device. They are never uploaded to our servers, shared with third parties, or used for tracking. Recordings exist only until you
+   delete them through the app's UI.
 
 Important: These recordings are stored exclusively locally on your device. They are never uploaded to our servers, shared with third parties, or used for tracking. Recordings exist only until you delete them through the app's UI.
 
