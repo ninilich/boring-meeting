@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective Date: March 18, 2026**
+**Effective Date: April 10, 2026**
 
 ## Introduction
 This Privacy Policy for BoringMeeting describes how we handle user information. We do not collect, store on remote servers, or share any personal data with third parties. All processing happens locally on your device.
@@ -19,10 +19,33 @@ The app operates primarily locally on the user's device.
 Important: These recordings are stored exclusively locally on your device. They are never uploaded to our servers, shared with third parties, or used for tracking. Recordings exist only until you delete them through the app's UI.
 
 ## Internet Connection and Downloads
-The app requires an internet connection only for setup to download open source AI/ML models that are needed for the app to function.
-- Downloads come directly from external open-source providers.
-- We do not collect or link any personal data to these downloads.
-- Network requests are not used for tracking, profiling, or advertising.
+The app requires an internet connection only for:
+- Setup to download open source AI/ML models that are needed for the app to function and for.
+  - Downloads come directly from external open-source providers.
+  - We do not collect or link any personal data to these downloads.
+- Checking updates (via AppStore)
+- Sending anonymous hearbeat (see section Analytics & Device Telemetry below)
+
+## Analytics & Device Telemetry
+We use Heartbeat to track basic app usage metrics only.
+
+What we collect:
+- Truncated device identifier: SHA256 hash of device UUID, using only first 16 characters (leaving 48 characters unused) - non-reversible
+- App version number
+- One ping per day, maximum
+
+What we do NOT collect:
+- No personal data (name, email, phone)
+- No IP address or geolocation
+- No user behavior tracking
+- No app interaction logs
+- No recording/audio data
+
+Purpose:
+We only want to know: "How many unique devices ran our app today?" This helps us understand if people are actually using BoringMeeting.
+
+Technical Details: [Heartbeat](github.com/maierru/heartbeat-tracker) is an open-source project. Data sent via HTTPS. One GET request per day while app is running. No data sent after you close the app.
+
 
 ## Data Usage
 All data processed by the app — including meeting recordings and transcription results — is handled locally on your device.
@@ -30,7 +53,7 @@ All data processed by the app — including meeting recordings and transcription
 - No data leaves your device. Transcription models process content offline.
 
 ## Third Parties
-We do not use third-party analytics, advertising networks, or SDKs that collect personal data.
+We do not use third-party advertising networks, or SDKs that collect personal data.
 Open source model providers may have their own terms and licenses for the models themselves, but they do not receive your personal data from us.
 
 ## Data Storage and Deletion
