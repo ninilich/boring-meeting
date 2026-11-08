@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		403B0C612F82ED46006893CF /* Heartbeat in Frameworks */ = {isa = PBXBuildFile; productRef = 403B0C602F82ED46006893CF /* Heartbeat */; };
+		A1B2C3D42F3B000100000003 /* WhisperKit in Frameworks */ = {isa = PBXBuildFile; productRef = A1B2C3D42F3B000100000002 /* WhisperKit */; };
+		BEEF03002F3A000000000003 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = BEEF02002F3A000000000002 /* ArgumentParser */; };
+		BEEF0D002F3A00000000000D /* bmeeting in Embed CLI */ = {isa = PBXBuildFile; fileRef = BEEF06002F3A000000000006 /* bmeeting */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		400397B62F3A799F009988B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4003979E2F3A799E009988B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 400397A52F3A799E009988B5;
+			remoteInfo = BoringMeeting;
+		};
+		BEEF0E002F3A00000000000E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4003979E2F3A799E009988B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BEEF07002F3A000000000007;
+			remoteInfo = bmeeting;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEEF0C002F3A00000000000C /* Embed CLI */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				BEEF0D002F3A00000000000D /* bmeeting in Embed CLI */,
+			);
+			name = "Embed CLI";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		400397A62F3A799E009988B5 /* BoringMeeting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoringMeeting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		400397B52F3A799F009988B5 /* BoringMeetingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoringMeetingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEEF06002F3A000000000006 /* bmeeting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bmeeting; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		400397A82F3A799E009988B5 /* BoringMeeting */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BoringMeeting;
+			sourceTree = "<group>";
+		};
+		400397B82F3A799F009988B5 /* BoringMeetingTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BoringMeetingTests;
+			sourceTree = "<group>";
+		};
+		BEEF08002F3A000000000008 /* BMeetingCLI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BMeetingCLI;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		400397A32F3A799E009988B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B2C3D42F3B000100000003 /* WhisperKit in Frameworks */,
+				403B0C612F82ED46006893CF /* Heartbeat in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400397B22F3A799F009988B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEEF05002F3A000000000005 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEEF03002F3A000000000003 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4003979D2F3A799E009988B5 = {
+			isa = PBXGroup;
+			children = (
+				400397A82F3A799E009988B5 /* BoringMeeting */,
+				BEEF08002F3A000000000008 /* BMeetingCLI */,
+				400397B82F3A799F009988B5 /* BoringMeetingTests */,
+				400397A72F3A799E009988B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		400397A72F3A799E009988B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				400397A62F3A799E009988B5 /* BoringMeeting.app */,
+				BEEF06002F3A000000000006 /* bmeeting */,
+				400397B52F3A799F009988B5 /* BoringMeetingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		400397A52F3A799E009988B5 /* BoringMeeting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400397C92F3A799F009988B5 /* Build configuration list for PBXNativeTarget "BoringMeeting" */;
+			buildPhases = (
+				400397A22F3A799E009988B5 /* Sources */,
+				400397A32F3A799E009988B5 /* Frameworks */,
+				400397A42F3A799E009988B5 /* Resources */,
+				BEEF0C002F3A00000000000C /* Embed CLI */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BEEF0F002F3A00000000000F /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				400397A82F3A799E009988B5 /* BoringMeeting */,
+			);
+			name = BoringMeeting;
+			packageProductDependencies = (
+				A1B2C3D42F3B000100000002 /* WhisperKit */,
+				403B0C602F82ED46006893CF /* Heartbeat */,
+			);
+			productName = BoringMeeting;
+			productReference = 400397A62F3A799E009988B5 /* BoringMeeting.app */;
+			productType = "com.apple.product-type.application";
+		};
+		400397B42F3A799F009988B5 /* BoringMeetingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 400397CC2F3A799F009988B5 /* Build configuration list for PBXNativeTarget "BoringMeetingTests" */;
+			buildPhases = (
+				400397B12F3A799F009988B5 /* Sources */,
+				400397B22F3A799F009988B5 /* Frameworks */,
+				400397B32F3A799F009988B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				400397B72F3A799F009988B5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				400397B82F3A799F009988B5 /* BoringMeetingTests */,
+			);
+			name = BoringMeetingTests;
+			packageProductDependencies = (
+			);
+			productName = BoringMeetingTests;
+			productReference = 400397B52F3A799F009988B5 /* BoringMeetingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BEEF07002F3A000000000007 /* bmeeting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BEEF0B002F3A00000000000B /* Build configuration list for PBXNativeTarget "bmeeting" */;
+			buildPhases = (
+				BEEF04002F3A000000000004 /* Sources */,
+				BEEF05002F3A000000000005 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BEEF08002F3A000000000008 /* BMeetingCLI */,
+			);
+			name = bmeeting;
+			packageProductDependencies = (
+				BEEF02002F3A000000000002 /* ArgumentParser */,
+			);
+			productName = bmeeting;
+			productReference = BEEF06002F3A000000000006 /* bmeeting */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4003979E2F3A799E009988B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					400397A52F3A799E009988B5 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					400397B42F3A799F009988B5 = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 400397A52F3A799E009988B5;
+					};
+					BEEF07002F3A000000000007 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = 400397A12F3A799E009988B5 /* Build configuration list for PBXProject "BoringMeeting" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4003979D2F3A799E009988B5;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A1B2C3D42F3B000100000001 /* XCRemoteSwiftPackageReference "WhisperKit" */,
+				403B0C5F2F82ED46006893CF /* XCRemoteSwiftPackageReference "heartbeat-tracker" */,
+				BEEF01002F3A000000000001 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 400397A72F3A799E009988B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				400397A52F3A799E009988B5 /* BoringMeeting */,
+				BEEF07002F3A000000000007 /* bmeeting */,
+				400397B42F3A799F009988B5 /* BoringMeetingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		400397A42F3A799E009988B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400397B32F3A799F009988B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		400397A22F3A799E009988B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		400397B12F3A799F009988B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEEF04002F3A000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		400397B72F3A799F009988B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 400397A52F3A799E009988B5 /* BoringMeeting */;
+			targetProxy = 400397B62F3A799F009988B5 /* PBXContainerItemProxy */;
+		};
+		BEEF0F002F3A00000000000F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BEEF07002F3A000000000007 /* bmeeting */;
+			targetProxy = BEEF0E002F3A00000000000E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		400397C72F3A799F009988B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		400397C82F3A799F009988B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		400397CA2F3A799F009988B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = BoringMeeting/BoringMeeting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = B347AFPTB4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_BGTaskSchedulerPermittedIdentifiers = work.heartbeat.refresh;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "BoringMeeting needs access to your microphone to record your voice during meetings.";
+				INFOPLIST_KEY_NSScreenCaptureUsageDescription = "BoringMeeting needs this permission to record audio from Zoom, Teams, and other apps. We only capture audio, never video or screenshots. This is required by macOS for system audio access.";
+				INFOPLIST_KEY_UIBackgroundModes = fetch;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ninil.boringmeeting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		400397CB2F3A799F009988B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BoringMeeting/BoringMeeting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 10;
+				DEVELOPMENT_TEAM = B347AFPTB4;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_BGTaskSchedulerPermittedIdentifiers = work.heartbeat.refresh;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "BoringMeeting needs access to your microphone to record your voice during meetings.";
+				INFOPLIST_KEY_NSScreenCaptureUsageDescription = "BoringMeeting needs this permission to record audio from Zoom, Teams, and other apps. We only capture audio, never video or screenshots. This is required by macOS for system audio access.";
+				INFOPLIST_KEY_UIBackgroundModes = fetch;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ninil.boringmeeting;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		400397CD2F3A799F009988B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ninil.boringmeetingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoringMeeting.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BoringMeeting";
+			};
+			name = Debug;
+		};
+		400397CE2F3A799F009988B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.ninil.boringmeetingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BoringMeeting.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BoringMeeting";
+			};
+			name = Release;
+		};
+		BEEF09002F3A000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_ENTITLEMENTS = BMeetingCLI/bmeeting.entitlements;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.6.0;
+				PRODUCT_NAME = bmeeting;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = none;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BEEF0A002F3A00000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BMeetingCLI/bmeeting.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B347AFPTB4;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 0.6.0;
+				PRODUCT_NAME = bmeeting;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = none;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		400397A12F3A799E009988B5 /* Build configuration list for PBXProject "BoringMeeting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400397C72F3A799F009988B5 /* Debug */,
+				400397C82F3A799F009988B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400397C92F3A799F009988B5 /* Build configuration list for PBXNativeTarget "BoringMeeting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400397CA2F3A799F009988B5 /* Debug */,
+				400397CB2F3A799F009988B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		400397CC2F3A799F009988B5 /* Build configuration list for PBXNativeTarget "BoringMeetingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				400397CD2F3A799F009988B5 /* Debug */,
+				400397CE2F3A799F009988B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BEEF0B002F3A00000000000B /* Build configuration list for PBXNativeTarget "bmeeting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BEEF09002F3A000000000009 /* Debug */,
+				BEEF0A002F3A00000000000A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		403B0C5F2F82ED46006893CF /* XCRemoteSwiftPackageReference "heartbeat-tracker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maierru/heartbeat-tracker.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.4.0;
+			};
+		};
+		A1B2C3D42F3B000100000001 /* XCRemoteSwiftPackageReference "WhisperKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/argmaxinc/WhisperKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+		BEEF01002F3A000000000001 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		403B0C602F82ED46006893CF /* Heartbeat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 403B0C5F2F82ED46006893CF /* XCRemoteSwiftPackageReference "heartbeat-tracker" */;
+			productName = Heartbeat;
+		};
+		A1B2C3D42F3B000100000002 /* WhisperKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A1B2C3D42F3B000100000001 /* XCRemoteSwiftPackageReference "WhisperKit" */;
+			productName = WhisperKit;
+		};
+		BEEF02002F3A000000000002 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BEEF01002F3A000000000001 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4003979E2F3A799E009988B5 /* Project object */;
+}

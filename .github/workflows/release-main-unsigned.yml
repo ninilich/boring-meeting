@@ -1,0 +1,112 @@
+name: Build and Publish Unsigned DMG
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'BoringMeeting/**'
+      - 'BMeetingCLI/**'
+      - 'BoringMeeting.xcodeproj/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-main
+  cancel-in-progress: false
+
+jobs:
+  build-and-release:
+    runs-on: macos-latest
+    env:
+      RELEASE_ENABLED: ${{ vars.RELEASE_ENABLED }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Resolve version and release gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          MARKETING_VERSION="$(./scripts/get_marketing_version.sh)"
+          if [[ -z "$MARKETING_VERSION" ]]; then
+            echo "Failed to resolve MARKETING_VERSION" >&2
+            exit 1
+          fi
+
+          LATEST_VERSION="$(git tag -l 'v*' | sed 's/^v//' | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort -V | tail -n1 || true)"
+
+          SHOULD_RELEASE=false
+          if [[ "${RELEASE_ENABLED:-}" != "true" ]]; then
+            echo "Skipping release: repository variable RELEASE_ENABLED is not true."
+          elif [[ -z "$LATEST_VERSION" ]]; then
+            SHOULD_RELEASE=true
+          elif [[ "$MARKETING_VERSION" != "$LATEST_VERSION" ]]; then
+            MAX_VERSION="$(printf '%s\n%s\n' "$LATEST_VERSION" "$MARKETING_VERSION" | sort -V | tail -n1)"
+            if [[ "$MAX_VERSION" == "$MARKETING_VERSION" ]]; then
+              SHOULD_RELEASE=true
+            fi
+          fi
+
+          if [[ "$SHOULD_RELEASE" != "true" ]]; then
+            echo "No release: MARKETING_VERSION=$MARKETING_VERSION, latest tag version=${LATEST_VERSION:-none}"
+          fi
+
+          echo "marketing_version=$MARKETING_VERSION" >> "$GITHUB_OUTPUT"
+          echo "should_release=$SHOULD_RELEASE" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare release notes from WhatsNew.json
+        if: steps.gate.outputs.should_release == 'true'
+        shell: bash
+        env:
+          VERSION: ${{ steps.gate.outputs.marketing_version }}
+        run: |
+          set -euo pipefail
+
+          jq -r --arg v "$VERSION" '
+            .versions[] | select(.version == $v)
+            | "## " + .title + "\n\n"
+              + (.highlights | map("- " + .) | join("\n"))
+              + (if .details then "\n\n" + .details else "" end)
+          ' BoringMeeting/Resources/WhatsNew.json > release_notes.md
+
+          if [[ ! -s release_notes.md ]]; then
+            echo "No entry for version $VERSION in WhatsNew.json" >&2
+            exit 1
+          fi
+
+          cat >> release_notes.md <<'EOF'
+
+          ---
+
+          Automated unsigned build from `main`.
+
+          - This DMG is not signed or notarized. macOS may show an unidentified developer warning on first launch (see the README for how to open it).
+          - Prefer the [App Store version](https://apps.apple.com/us/app/boringmeeting/id6760206449?mt=12) if you don't need to run an unsigned build.
+          - Verify the download with the attached `.sha256` file.
+          EOF
+
+      - name: Build DMG
+        if: steps.gate.outputs.should_release == 'true'
+        env:
+          VERSION: ${{ steps.gate.outputs.marketing_version }}
+        run: ./scripts/build_local_dmg.sh
+
+      - name: Publish GitHub Release
+        if: steps.gate.outputs.should_release == 'true'
+        uses: softprops/action-gh-release@v3
+        with:
+          tag_name: v${{ steps.gate.outputs.marketing_version }}
+          name: BoringMeeting v${{ steps.gate.outputs.marketing_version }}
+          make_latest: true
+          body_path: release_notes.md
+          files: |
+            dist/*.dmg
+            dist/*.sha256
