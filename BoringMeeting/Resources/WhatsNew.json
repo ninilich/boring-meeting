@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "versions": [
+    {
+      "version": "0.6.0",
+      "title": "Batch transcription and CLI bug fix",
+      "highlights": [
+        "Batch transcription — select multiple recordings and transcribe them all with one click",
+        "English-only models added: tiny.en, base.en, small.en, medium.en, and distil-large-v3 — faster and more accurate for English recordings",
+        "Fixed bmeeting CLI not launching on macOS 26.6.2 (Tahoe)",
+        "BoringMeeting is now open source under GPL-3.0 — read, build and contribute on GitHub",
+        "New links in Settings → About: source code, issue tracker and privacy policy",
+        "Unsigned builds are also published on GitHub Releases"
+      ]
+    },
+    {
+      "version": "0.5.1",
+      "title": "Bug fixes and stability improvements",
+      "highlights": [
+        "Bug fixes and stability improvements"
+      ]
+    },
+    {
+      "version": "0.5.0",
+      "title": "Trim recordings, CLI integration, and more",
+      "highlights": [
+        "Split audio streams is now on by default — separate mic and system audio for better transcription accuracy",
+        "bmeeting CLI — manage meetings from the terminal or connect to AI tools and scripts",
+        "Select audio source before transcription — pick system audio only to avoid echo when listening without headphones",
+        "Auto-delete old recordings — set a retention period in Settings to keep storage clean",
+        "Transcription time estimate now adapts to your Mac's actual speed",
+        "Trim recordings — cut the end of a recording if you forgot to stop in time",
+        "Minor UI polish — cleaner transcript area, slightly more readable status text",
+        "Recording button position — move the Start Recording panel to the bottom of the sidebar via Settings → General",
+        "Minor internal improvements"
+      ]
+    },
+    {
+      "version": "0.4.1",
+      "title": "Bug fixes and stability improvements",
+      "highlights": [
+        "Fixed toggle in What's New screen not responding to clicks",
+        "Added Hide menu bar icon setting (useful when screen sharing if you do not want others to see the recording icon in the menu bar)"
+      ]
+    },
+    {
+      "version": "0.4.0",
+      "title": "Better transcription controls and a more stable interface",
+      "highlights": [
+        "Improved transcription model management and status display",
+        "Small performance and UI stability improvements",
+        "Added beta feature: split transcription for system audio and microphone streams"
+      ],
+      "details": "Thanks for using BoringMeeting. As always, your recordings and transcriptions stay local on your device."
+    }
+  ]
+}

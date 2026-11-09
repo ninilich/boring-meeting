@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BoringMeeting — Offline AI Transcription for Mac</title>
+  <meta name="description" content="Free, open source (GPL-3.0) macOS app that records meetings and transcribes them locally with Whisper. No cloud, no account.">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -25,6 +26,8 @@
     .appstore-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
     .appstore-btn svg { width: 22px; height: 22px; }
     .hero-sub { margin-top: 16px; font-size: 13px; color: rgba(255,255,255,0.35); }
+    .hero-sub + .hero-sub { margin-top: 6px; }
+    .hero-sub .source-link { color: rgba(255,255,255,0.6); }
 
     /* SCREENSHOTS */
     .screenshots-section { background: #0c0c10; padding: 0 0 72px; position: relative; }
@@ -145,14 +148,15 @@
 <div class="hero">
   <div class="hero-inner">
     <img src="icon.png" alt="BoringMeeting" class="hero-icon">
-    <div class="badge-free">Free — No Account Needed</div>
+    <div class="badge-free">Free &amp; Open Source — No Account Needed</div>
     <h1>Your meeting was <span>boring</span>.<br>Get the transcript. Skip the rest.</h1>
     <p>Record any Teams, Zoom, or Meet call locally on your Mac. Get clean text in minutes. No cloud. No drama.</p>
     <a href="https://apps.apple.com/us/app/boringmeeting/id6760206449?mt=12" class="appstore-btn" target="_blank">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       Download on the App Store
     </a>
-    <div class="hero-sub">Apple Silicon (M1+) · macOS · Free</div>
+    <div class="hero-sub">Apple Silicon (M1+) · macOS · Free · Open source (GPL-3.0)</div>
+    <div class="hero-sub"><a href="https://github.com/ninilich/boring-meeting" class="source-link" target="_blank">View source on GitHub</a></div>
   </div>
 </div>
 
@@ -200,7 +204,7 @@
     <div class="feature-card">
       <div class="feature-icon">🔒</div>
       <h3>100% Local Processing</h3>
-      <p>AI transcription runs entirely on your Mac. Your words never leave your machine — not even a ping to a server.</p>
+      <p>AI transcription runs entirely on your Mac. Your recordings and transcripts never leave your machine.</p>
     </div>
     <div class="feature-card">
       <div class="feature-icon">⚡</div>
@@ -345,7 +349,7 @@
         <p>You're in full control. Delete recordings any time. No account — nothing to deactivate.</p>
       </div>
     </div>
-    <div class="no-cloud-badge">✓ Data Not Collected — verified by Apple</div>
+    <div class="no-cloud-badge">✓ Data Not Collected · No account · No cloud upload · Open source</div>
   </section>
 </div>
 
@@ -358,7 +362,8 @@
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
       Download on the App Store
     </a>
-    <div class="cta-note">Apple Silicon (M1+) required · macOS · Free</div>
+    <div class="cta-note">Apple Silicon (M1+) required · macOS · Free · Open source</div>
+    <div class="cta-note"><a href="https://github.com/ninilich/boring-meeting" target="_blank">View source on GitHub</a></div>
   </div>
 </div>
 
@@ -367,7 +372,9 @@
   <p>Questions? <a href="mailto:ninilich@tuta.io">ninilich@tuta.io</a> — we reply within 24 hours.</p>
   <p style="margin-top: 8px;">
     Made for Apple Silicon Macs · 100% Local Processing · No Cloud Required ·
-    <a href="https://github.com/ninilich/boring-meeting/blob/main/privacy-policy.md" target="_blank">Privacy Policy</a>
+    <a href="https://github.com/ninilich/boring-meeting/blob/main/privacy-policy.md" target="_blank">Privacy Policy</a> ·
+    <a href="https://github.com/ninilich/boring-meeting" target="_blank">Source Code (GPL-3.0)</a> ·
+    <a href="https://github.com/ninilich/boring-meeting/releases" target="_blank">Unsigned builds</a>
   </p>
 </footer>
 
